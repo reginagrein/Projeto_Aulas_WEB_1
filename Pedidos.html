@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Encomendas </title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<script language = "JavaScript">
+
+function validar(form) {
+
+  if (form.pedido.selectedIndex == 0 || form.quantidade.selectedIndex == 0 ) {
+
+      window.alert("Tem que seleccionar pelo menos 1 Opção!");
+
+      return(false);
+
+  } else {
+
+      var s = form.nome.value;
+
+      var s1 = form.enderço.value;
+
+      var s2 = form.telefone.value;
+
+      if ( (s.length < 5) || (s1.length < 6) || (s2.length < 9) ) {
+
+           window.alert("preencha correctamente o seu Nome, Enderço e Telefone");
+
+           return(false);
+
+      } else {
+
+			if (form.pag[0].checked != true && form.pag[1].checked != true &&
+
+				form.pag[2].checked != true ) {
+
+					window.alert("Escolha a forma de pagamento!");
+
+						return(false);
+
+          } 
+
+         }
+
+    }
+
+}
+
+</script>
+
+</head>
+
+ 
+
+<body>
+
+<h2> Ficha de Encomendas </h2>
+
+	<form name = "Chocolicia Arts" method="post" action = "mailto:chocoliciaArts@gmail.com"
+
+                                    onSubmit = "return validar(document.Chocolicia Arts)">
+
+<div>
+
+<ul>
+     <li> Qual Produto quer encomendar? </li>
+
+		<select name=" ">
+
+          <option/>
+
+<option> Bolo Artesanal </option>
+
+<option> Ovo de Colher </option>
+
+<option> Barra Recheada </option>
+
+<option> Brigadeiro Gourmet </option>
+
+     </select> </li>
+
+ 
+	</ul>
+
+</div>
+
+<div>
+<ul>
+     <li> Qual Sabor? </li>
+		
+		<select name=" ">
+		
+	        <option/>
+
+<option> Crocante </option>
+
+<option> Café </option>
+
+<option> Nozes </option>
+
+<option> Leite Ninho </option>
+
+<option> Nutella </option>
+
+<option> Kinder Bueno </option>
+
+<option> Dois Amores </option>
+
+     </select> </li>
+
+      Quantidade: 
+
+     <select name = "quantidade">
+
+<option> 0 </option>
+
+<option> 1 </option>
+
+<option> 2 </option>
+
+<option> 3 </option>
+
+<option> 4 </option>
+
+<option> 5 </option>
+
+<option> 6 </option>
+
+     </select> 
+	</ul>
+
+</div>
+
+<hr/>
+
+<div>
+
+    <strong> Dados para entrega: </strong> <br>
+
+    Nome: 
+		<input type = "text" name="nome" size = "73" > <br>
+
+	Enderço: 
+		<input type = "text" name= "endereço" size = "70" > <br>
+
+    Telefone: 
+		<input type = "text" name = "telefone" > 
+</div>
+
+<hr/>
+
+<div>
+
+    <strong> Forma de pagamento: </strong> <br>
+
+    <input type = "radio" name = "pag" /> Cartão de Crédito <br>
+
+	<input type = "radio" name = "pag" /> À Vista <br>
+
+    <input type = "radio" name = "pag" /> Boleto (30 dias) <br>
+
+</div>
+
+<hr/>
+
+<input type = "submit" value = "Enviar!" />
+
+<input type = "reset" value = "Limpar" />
+
+</form>
+
+</body>
+
+</html>
+
+  
