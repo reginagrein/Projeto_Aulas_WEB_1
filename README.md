@@ -1,2 +1,2 @@
 # Projeto_WEB_1
-Criação de um site, e realizar um formulário de pedidos 
+Criação de um site, e realização de formulário de pedidos 
